@@ -1,0 +1,187 @@
+:root {
+    --color-black: #F5F5F5; /* Define a cor preta como uma variável */
+    --color-white: #1C1C1C; /* Define a cor branca como uma variável */
+    --color-secundaria: #A9A9A9; /* Define uma cor para os links como uma variável */
+    --color-link: #A9A9A980; /* Define uma cor para os links como uma variável */
+    --color-link-hover: #4B4B4B80; /* Define a cor dos links ao passar o mouse como uma variável */
+}
+
+* {
+    margin: 0; /* Remove margens padrão de todos os elementos */
+    padding: 0; /* Remove preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Inclui bordas e preenchimentos no cálculo da largura e altura dos elementos */
+    background-color: var(--color-white);
+}
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif; /* Define a fonte do corpo */
+    font-weight: 400; /* Define o peso da fonte */
+    font-size: 1.2rem; /* Define o tamanho da fonte */
+    line-height: 1.5; /* Define a altura da linha */
+    color: var(--color-black); /* Define a cor do texto usando a variável (deve haver uma definição para --color-body) */
+    width: 100vw; /* Define a largura do corpo como 100% da largura da janela */
+    overflow-x: hidden; /* Oculta qualquer conteúdo que transborde horizontalmente */
+}
+
+.header {
+    background-color: var(--color-white); /* Define o fundo do cabeçalho como branco */
+    padding: 1rem; /* Adiciona espaço interno ao cabeçalho */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave abaixo do cabeçalho */
+}
+
+.main {
+    padding-top: 80px; /* Adiciona espaço acima do conteúdo principal */
+    position: relative; /* Define a posição do contêiner principal como relativa */
+}
+
+.nav {
+    padding: 30px 40px; /* Adiciona espaço interno ao menu de navegação */
+    display: flex; /* Usa flexbox para organizar os itens do menu */
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    position: fixed; /* Fixa a posição do menu no topo da página */
+    top: 0; /* Alinha o menu ao topo da página */
+    left: 0; /* Alinha o menu à esquerda da página */
+    right: 0; /* Alinha o menu à direita da página */
+    z-index: 50; /* Define um índice de empilhamento para garantir que o menu esteja acima de outros elementos */
+
+}
+
+.nav__list {
+    list-style: none; /* Remove marcadores da lista */
+    padding: 4px; /* Adiciona preenchimento à lista */
+    row-gap: 4px; /* Espaçamento entre as linhas da lista (não aplicável a listas horizontais) */
+    background-color: var(--color-white);
+    border-radius: 999px; /* Faz bordas arredondadas na lista */
+    display: flex; /* Mantém a lista em linha */
+    gap: 2rem; /* Espaçamento entre os itens do menu */
+    
+}
+
+.list__item {
+    text-decoration: none; /* Remove sublinhado dos links */
+    color: var(--color-black); /* Define a cor do texto dos links */
+    transition: color 0.3s; /* Adiciona uma transição suave para a cor ao passar o mouse */
+    background-color: var(--color-link-hover); /* Define a cor de fundo ao passar o mouse */
+    padding: 0.8rem; /* Adiciona espaço interno ao item da lista */
+    font-size: 0.8rem; /* Define o tamanho da fonte do item da lista */
+}
+
+
+.list__item:hover {
+    color: var(--color-link-hover); /* Altera a cor do texto ao passar o mouse */
+}
+
+.container {
+    max-width: 1200px; /* Define a largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    padding: 2rem; /* Adiciona espaço ao redor do conteúdo no contêiner */
+}
+
+.heading {
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 2rem; /* Adiciona espaço abaixo do título */
+    display: flex; /* Usa flexbox para o título */
+    padding: 20px; /* Adiciona espaço interno ao título */
+    justify-content: center; /* Centraliza o conteúdo do título */
+    height: 50vh; /* Define a altura do título como 50% da altura da viewport */
+    flex-direction: column; /* Organiza os itens do título em coluna */
+    text-align: center; /* Centraliza o texto do título */
+    font-weight: 900; /* Define um peso de fonte mais forte para o título */
+    font-size: 3rem; /* Define o tamanho da fonte do título */
+    max-width: 600px; /* Define a largura máxima do título */
+    margin-left: auto; /* Centraliza horizontalmente */
+    margin-right: auto; /* Centraliza horizontalmente */
+    
+}
+
+.list {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove preenchimento padrão da lista */
+    display: flex; /* Usa flexbox para organizar os itens da lista */
+    justify-content: center; /* Centraliza a lista horizontalmente */
+    gap: 2rem; /* Espaçamento entre os itens da lista */
+    margin-bottom: 2rem; /* Adiciona espaço abaixo da lista */
+}
+
+.texto_alternativo {
+    font-weight: bold; /* Destaca o texto alternativo com negrito */
+}
+
+.grid-container {
+    display: grid; /* Usa grid layout para o contêiner */
+    grid-template-columns: repeat(2, 1fr); /* Cria duas colunas, dividindo a área disponível igualmente */
+    gap: 10px; /* Espaçamento entre os itens da grade */
+    max-width: 1200px; /* Define a largura máxima para o contêiner da grade */
+    margin: 0 auto; /* Centraliza o contêiner da grade na página */
+}
+
+/* Estilo para as imagens e vídeos */
+.grid-item {
+    width: 100%; /* Define a largura dos itens da grade como 100% do contêiner */
+    height: 400px; /* Define uma altura fixa para os itens da grade */
+    object-fit: cover; /* Ajusta o conteúdo ao espaço sem distorção */
+}
+
+.footer-content {
+    display: flex; /* Usa flexbox para organizar os itens do footer */
+    justify-content: space-between; /* Espaça os itens do footer */
+    width: 100%; /* Ocupa toda a largura do contêiner */
+    max-width: 1000px; /* Limita a largura máxima do footer */
+}
+
+.block-contact {
+    
+    text-align: center; /* Centraliza o texto no bloco de contato */
+    padding: 2rem; /* Adiciona espaço interno ao bloco de contato */
+}
+
+.block-contact__text {
+    margin: 0.5rem 0; /* Adiciona espaço acima e abaixo do texto no bloco de contato */
+}
+
+.block-contact__text a {
+    text-decoration: none; /* Remove o sublinhado do link */
+    color: var(--color-secundaria); /* Define a cor do texto do link */
+}
+
+.block-contact__text a:hover{
+    color: var(--color-link-hover)
+}
+.social {
+    
+    display: flex; /* Usa flexbox para organizar os itens sociais */
+    align-items: center; /* Alinha os itens sociais verticalmente ao centro */
+    justify-content: flex-end; /* Alinha os itens sociais à direita */
+    margin-top: 1rem; /* Adiciona espaço acima da seção social */
+    
+}
+
+.social a{
+    text-decoration: none; /* Remove o sublinhado dos links sociais */
+    color: inherit; /* Faz com que a cor do link herde a cor do texto pai */
+    
+}
+
+.social a:hover {
+    color: var(--color-link); /* Altera a cor do texto ao passar o mouse */
+}
+
+.social ul {
+    list-style-type: none; /* Remove marcadores da lista */
+    padding: 0; /* Remove preenchimento padrão da lista */
+    display: flex; /* Mantém a lista de itens sociais em linha */
+    gap: 1rem; /* Espaçamento entre os itens da lista social */
+    
+}
+
+/* Media query para telas pequenas */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column; /* Empilha os itens do footer em telas pequenas */
+        align-items: center; /* Centraliza os itens no footer */
+    }
+
+    .social {
+        margin-top: 0.5rem; /* Ajusta o espaçamento em telas pequenas */
+    }
+}
